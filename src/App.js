@@ -3,6 +3,7 @@ import { useStore } from './store/store';
 import { AddItemForm } from './store/AddItemForm';
 import { ShoppingItems } from './store/ShoppingItems';
 import { Cart } from './store/Cart';
+import { Notification } from './store/Notification';
 
 const App = () => {
   const { cart,
@@ -16,11 +17,12 @@ const App = () => {
     handleAddItem,
     removeItem,
     clearCart,
-    totalCartPrice } = useStore();
+    totalCartPrice, notification } = useStore();
 
   return (
     <>
       <AddItemForm onAddItem={handleAddItem} />
+      {notification && <Notification message={notification} />}
       <ShoppingItems
         items={items}
         quantities={quantities}

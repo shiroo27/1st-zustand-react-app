@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import { useStore } from './store/store';
-import ShoppingCart from './store/ShoppingCart';
 import { AddItemForm } from './store/AddItemForm';
 import { ShoppingCartDisplay } from './store/ShoppingCartDisplay';
+import { ShoppingCart } from './store/ShoppingCart';
 
 const App = () => {
   const { cart, addToCart, removeItem, clearCart } = useStore();
@@ -12,6 +12,7 @@ const App = () => {
     { id: 1, name: 'Cheetos', price: 2 },
     { id: 2, name: 'Piattos', price: 3 },
     { id: 3, name: 'Doritos', price: 2 },
+    {id: 4, name: 'Potato Chips', price: 2},
   ]);
 
   const handleAddToCart = (item) => {
@@ -49,7 +50,8 @@ const App = () => {
 
   return (
     <>
-      <AddItemForm onAddItem={handleAddItem} />
+      <AddItemForm
+      onAddItem={handleAddItem} />
       <ShoppingCartDisplay
         items={items}
         quantities={quantities}
@@ -58,7 +60,11 @@ const App = () => {
         handleFocus={handleFocus}
         handleRemoveItem={handleRemoveItem}
       />
-      <ShoppingCart cart={cart} removeItem={removeItem} totalPrice={totalPrice} clearCart={clearCart} />
+      <ShoppingCart
+      cart={cart}
+      removeItem={removeItem}
+      totalPrice={totalPrice}
+      clearCart={clearCart} />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { CartItem } from './CartItem';
 
-const ShoppingCart = ({ cart, removeItem, totalPrice, clearCart }) => {
+export const ShoppingCart = ({ cart, removeItem, totalPrice, clearCart }) => {
   return (
     <div className='shoppingCart'>
       <h2 className='shoppingCartList'>Shopping Cart List</h2>
@@ -21,6 +21,4 @@ const ShoppingCart = ({ cart, removeItem, totalPrice, clearCart }) => {
       )}
     </div>
   );
-};
-
-export default ShoppingCart;
+ };

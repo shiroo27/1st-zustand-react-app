@@ -12,7 +12,7 @@ export const ShoppingCart = ({ cart, removeItem, totalPrice, clearCart }) => {
           {cart.map(item => (
             <CartItem key={item.id} item={item} removeItem={removeItem} />
           ))}
-          <p className='totalPrice'>Total: $ {totalPrice}</p>
+          <p className='totalPrice'>Total: ₱ {totalPrice}</p>
           <br/>
           <button className='clearCartButton' onClick={clearCart}>
             Clear Cart

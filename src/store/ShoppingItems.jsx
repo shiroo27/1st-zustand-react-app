@@ -7,7 +7,7 @@ export const ShoppingItems = ({
   handleQuantityChange,
   handleFocus,
   handleRemoveItem,
-  handlePriceChange // add handlePriceChange prop
+  handlePriceChange
 }) => {
   const [editItemId, setEditItemId] = useState(null);
   const [editedPrice, setEditedPrice] = useState(0);

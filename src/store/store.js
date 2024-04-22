@@ -1,18 +1,18 @@
 import { create } from "zustand";
 
 export const useStore = create((set, get) => ({
-
+    //
     cart: [],
-
-    items: [ // Define items in the store
+    //
+    items: [
     { id: 1, name: 'Cheetos', price: 156 },
     { id: 2, name: 'Piattos', price: 150 },
     { id: 3, name: 'Doritos', price: 157 },
     { id: 4, name: 'Potato Chips', price: 192 },
     ],
-
-    quantities: {}, // ga-add quantities sa store...
-
+    //
+    quantities: {},
+    //
     handleQuantityChange: (itemId, newQuantity) => {
         set((state) => ({
           quantities: {
@@ -21,7 +21,7 @@ export const useStore = create((set, get) => ({
             }
         }));
     },
-
+    //
     handleFocus: (itemId) => {
         set((state) => ({
           quantities: {
@@ -30,13 +30,13 @@ export const useStore = create((set, get) => ({
           }
         }));
     },
-
+    //
     handleRemoveItem: (itemId) => {
         set((state) => ({
           items: state.items.filter(item => item.id !== itemId)
         }));
     },
-
+    //
     handlePriceChange: (itemId, newPrice) => {
         set((state) => ({
           items: state.items.map(item =>
@@ -44,22 +44,22 @@ export const useStore = create((set, get) => ({
           )
         }));
     },
-
+    //
     handleAddToCart: (item) => {
         set((state) => ({ cart: [...state.cart, item] }));
     },
-
+    //
     handleAddItem: (item) => {
         set((state) => ({ items: [...state.items, item] }));
     },
-    
+    //
     removeItem: (itemId) =>
         set((state) => ({
             cart: state.cart.filter((item) => item.id !== itemId)
     })),
-
+    //
     clearCart: () => set({ cart: [] }),
-
+    // to calculate the total price of all items in the cart...
     totalCartPrice: () => {
         const { cart } = get();
         let total = 0;
@@ -67,6 +67,6 @@ export const useStore = create((set, get) => ({
           total += item.price * item.quantity;
         });
         return total;
-    }
+    },
     
 }));

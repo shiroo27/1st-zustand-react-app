@@ -5,9 +5,6 @@ import { CartItem } from './CartItem';
 export const Cart = () => {
   const { cart, removeItem, clearCart, totalCartPrice } = useStore(); // Retrieve cart-related data and actions from the store
 
-  // to calculate the total price of all items in the cart...
-  
-
   return (
     <div className='shoppingCart'>
       <h2 className='shoppingCartList'>Cart</h2>

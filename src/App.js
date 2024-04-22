@@ -5,7 +5,18 @@ import { ShoppingItems } from './store/ShoppingItems';
 import { Cart } from './store/Cart';
 
 const App = () => {
-  const { cart, items, quantities, handleQuantityChange, handleFocus, handleRemoveItem, handlePriceChange, handleAddToCart, handleAddItem, removeItem, clearCart, totalCartPrice } = useStore();
+  const { cart,
+    items,
+    quantities,
+    handleQuantityChange,
+    handleFocus,
+    handleRemoveItem,
+    handlePriceChange,
+    handleAddToCart,
+    handleAddItem,
+    removeItem,
+    clearCart,
+    totalCartPrice } = useStore();
 
   return (
     <>
@@ -17,7 +28,7 @@ const App = () => {
         handleQuantityChange={handleQuantityChange}
         handleFocus={handleFocus}
         handleRemoveItem={handleRemoveItem}
-        handlePriceChange={handlePriceChange} // pass the handlePriceChange function
+        handlePriceChange={handlePriceChange}
       />
       <Cart
         cart={cart}

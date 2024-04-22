@@ -1,7 +1,13 @@
 import React from 'react';
+import { useStore } from './store'; // Import the store
 import { CartItem } from './CartItem';
 
-export const Cart = ({ cart, removeItem, totalPrice, clearCart }) => {
+export const Cart = () => {
+  const { cart, removeItem, clearCart, totalCartPrice } = useStore(); // Retrieve cart-related data and actions from the store
+
+  // to calculate the total price of all items in the cart...
+  
+
   return (
     <div className='shoppingCart'>
       <h2 className='shoppingCartList'>Cart</h2>
@@ -12,7 +18,7 @@ export const Cart = ({ cart, removeItem, totalPrice, clearCart }) => {
           {cart.map(item => (
             <CartItem key={item.id} item={item} removeItem={removeItem} />
           ))}
-          <p className='totalPrice'>Total: ₱ {totalPrice}</p>
+          <p className='totalPrice'>Total: ₱ {totalCartPrice()}</p>
           <br/>
           <button className='clearCartButton' onClick={clearCart}>
             Clear Cart

@@ -41,7 +41,7 @@
 
 import React, { useState } from 'react';
 
-export const AddItemForm = ({ onAddItem, items }) => {
+export const AddItemForm = ({ items, onAddItem }) => {
   const [itemName, setItemName] = useState('');
   const [itemPrice, setItemPrice] = useState('');
 

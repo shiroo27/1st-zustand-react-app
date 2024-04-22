@@ -1,0 +1,98 @@
+/* Add Item Form */
+.addItemsDiv
+{
+  @apply flex flex-col mt-4;
+}
+
+.addItemsTitle
+{
+  @apply text-2xl font-bold mb-4 ml-5 text-left;
+}
+
+.inputClass
+{
+  @apply appearance-none text-sm border-b border-b-gray-400 py-2 px-3 leading-tight focus:outline-none hover:bg-blue-100 focus:border-blue-500 ml-5 mr-5;
+}
+
+.addItemsButton
+{
+  @apply mt-4 text-sm px-2 py-2 font-semibold bg-blue-500 text-white rounded-3xl hover:bg-blue-600 focus:outline-none;
+}
+
+/* Shopping Cart Display */
+.shoppingCartContainer
+{
+  @apply bg-gray-200 p-4;
+}
+
+.shoppingCartTitle
+{
+  @apply text-2xl font-bold mb-4 text-left;
+}
+
+.shoppingItem
+{
+  @apply flex text-sm items-center justify-between bg-white rounded-lg shadow-md p-4 mb-4;
+}
+
+.nameClass
+{
+  @apply font-bold;
+}
+
+.quantity
+{
+  @apply border-b text-sm border-b-gray-400 p-2 w-12 text-center;
+}
+
+.addToCartButton
+{
+  @apply text-sm bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-2 rounded-3xl focus:outline-none;
+}
+
+.removeItemButton
+{
+  @apply text-sm bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-2 rounded-3xl focus:outline-none;
+}
+
+/* Shopping Cart...*/
+
+.shoppingCart
+{
+  @apply bg-gray-200 p-4;
+}
+
+.shoppingCartList
+{
+  @apply text-2xl font-bold mb-4;
+}
+
+.emptyList
+{
+  @apply text-center text-red-600 font-semibold text-sm italic;
+}
+
+.totalPrice
+{
+  @apply text-xl font-semibold text-right;
+}
+
+.clearCartButton
+{
+  @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded-3xl focus:outline-none;
+}
+
+.cartItem
+{
+  @apply bg-white rounded-lg shadow-md p-4 mb-4;
+}
+
+.nameP
+{
+  @apply font-bold;
+}
+
+.removeButton
+{
+  @apply bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-3xl focus:outline-none mt-2;
+}

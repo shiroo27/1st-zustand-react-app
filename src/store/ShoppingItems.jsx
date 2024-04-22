@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
-export const ShoppingCartDisplay = ({
-  items, // add items prop...
-  quantities, // add quantities prop...
-  handleAddToCart, // add handleAddToCart prop...
-  handleQuantityChange, // add handleQuantityChange prop...
-  handleFocus, // add handleFocus prop...
-  handleRemoveItem, // add handleRemoveItem prop...
-  handlePriceChange // add handlePriceChange prop from the App.js...
+export const ShoppingItems = ({
+  items,
+  quantities,
+  handleAddToCart,
+  handleQuantityChange,
+  handleFocus,
+  handleRemoveItem,
+  handlePriceChange // add handlePriceChange prop
 }) => {
-  //
   const [editItemId, setEditItemId] = useState(null);
   const [editedPrice, setEditedPrice] = useState(0);
 
@@ -31,7 +30,7 @@ export const ShoppingCartDisplay = ({
 
   return (
     <div className='shoppingCartContainer'>
-      <h1 className='shoppingCartTitle'>Shopping Cart</h1>
+      <h1 className='shoppingCartTitle'>Shopping Items</h1>
       <div className='shoppingItemListContainer'>
         <div className='shoppingItemContainer'>
           {items.map(item => (

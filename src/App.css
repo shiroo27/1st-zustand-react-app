@@ -74,7 +74,7 @@
 
 .totalPrice
 {
-  @apply text-xl font-semibold text-right;
+  @apply text-xl font-semibold text-right text-white bg-gray-600 px-4 py-2 rounded-2xl;
 }
 
 .clearCartButton
@@ -115,4 +115,9 @@
 .editPriceInput
 {
   @apply border-b text-sm border-b-gray-400 p-2 w-16 text-left;
+}
+
+.totalPrice
+{
+
 }

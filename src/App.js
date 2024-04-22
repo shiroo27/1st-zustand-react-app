@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import { useStore } from './store/store';
 import { AddItemForm } from './store/AddItemForm';
-import { ShoppingCartDisplay } from './store/ShoppingCartDisplay';
-import { ShoppingCart } from './store/ShoppingCart';
+import { ShoppingItems } from './store/ShoppingItems';
+import { Cart } from './store/Cart';
 
 const App = () => {
   const { cart, addToCart, removeItem, clearCart } = useStore();
@@ -59,7 +59,7 @@ const App = () => {
   return (
     <>
       <AddItemForm onAddItem={handleAddItem} />
-      <ShoppingCartDisplay
+      <ShoppingItems
         items={items}
         quantities={quantities}
         handleAddToCart={handleAddToCart}
@@ -68,7 +68,7 @@ const App = () => {
         handleRemoveItem={handleRemoveItem}
         handlePriceChange={handlePriceChange} // pass the handlePriceChange function
       />
-      <ShoppingCart
+      <Cart
         cart={cart}
         removeItem={removeItem}
         totalPrice={totalPrice}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { CartItem } from './CartItem';
 
-export const ShoppingCart = ({ cart, removeItem, totalPrice, clearCart }) => {
+export const Cart = ({ cart, removeItem, totalPrice, clearCart }) => {
   return (
     <div className='shoppingCart'>
-      <h2 className='shoppingCartList'>Shopping Cart List</h2>
+      <h2 className='shoppingCartList'>Cart</h2>
       {cart.length === 0 ? (
         <p className='emptyList'>Your cart is empty. Please add something.</p>
       ) : (
